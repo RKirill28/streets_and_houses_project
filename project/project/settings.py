@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8z!+$)0n53udii+@a)2q@@az)=n^3o!u%a6t5fy2-y$4u_*8p@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -141,6 +141,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static/'
 
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
@@ -211,7 +212,5 @@ TINYMCE_DEFAULT_CONFIG = {
         input.click();
         }'''
 }
-
-
 
 allowed_extensions_for_video_files = ['.mp4', '.mov', '.avi', '.mkv']
